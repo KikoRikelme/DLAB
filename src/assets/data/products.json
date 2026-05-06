@@ -1,0 +1,205 @@
+{
+  "ecommerce_name": "DLAB Beauty Boutique",
+  "currency": "EUR",
+  "total_products": 22,
+  "products": [
+    {
+      "id": "DL-001",
+      "name": "High Shine Lip Gloss",
+      "slug": "high-shine-lip-gloss",
+      "price": 24.99,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-lip-gloss-private-label-clear-shade-white-packaging.jpg",
+      "description": "Brillo de labios ultra hidratante con acabado espejo. Su fórmula no pegajosa enriquecida con aceites naturales deja tus labios con un volumen irresistible.",
+      "options": ["Crystal Clear", "Soft Pink", "Deep Berry"]
+    },
+    {
+      "id": "DL-002",
+      "name": "Luxury Lip Oil Treatment",
+      "slug": "luxury-lip-oil-treatment",
+      "price": 22.5,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-lip-oil-private-label-clear-shade-white-packaging.jpg",
+      "description": "El híbrido perfecto entre maquillaje y tratamiento. Nutre profundamente mientras aporta un toque de color sutil y un brillo sofisticado.",
+      "options": ["Pure Glow", "Rose Petal", "Nude Sand"]
+    },
+    {
+      "id": "DL-003",
+      "name": "Everlasting Lip Tint",
+      "slug": "everlasting-lip-tint",
+      "price": 28.0,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-lip-tint-private-label-pink-shade-white-packaging.jpg",
+      "description": "Tinta de labios de larga duración con efecto 'tatuaje'. Resistente a roces y besos para un color impecable todo el día.",
+      "options": ["Rosewood", "Classic Red", "Sunset Brown"]
+    },
+    {
+      "id": "DL-004",
+      "name": "Radiance Boosting Facial Serum",
+      "slug": "radiance-boosting-serum",
+      "price": 45.0,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-face-serum-private-label-white-packaging.jpg",
+      "description": "Sérum concentrado iluminador. Formulado con activos botánicos que unifican el tono y restauran la luminosidad natural.",
+      "options": ["Normal Skin", "Sensitive Skin"]
+    },
+    {
+      "id": "DL-005",
+      "name": "Velvet Moisturizing Face Cream",
+      "slug": "velvet-moisturizing-cream",
+      "price": 39.0,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-face-cream-private-label-white-packaging.jpg",
+      "description": "Crema hidratante de textura aterciopelada. Crea una barrera protectora contra la polución y mantiene la hidratación 24h.",
+      "options": ["50ml"]
+    },
+    {
+      "id": "DL-006",
+      "name": "Cheek & Lip Liquid Blush",
+      "slug": "cheek-lip-liquid-blush",
+      "price": 26.0,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-liquid-blush-private-label-pink-shade-white-packaging.jpg",
+      "description": "Colorete líquido multifuncional. Aporta un rubor saludable y natural tanto en mejillas como en labios.",
+      "options": ["Peachy Pink", "Deep Rose", "Berry Blast"]
+    },
+    {
+      "id": "DL-007",
+      "name": "Silk Touch Hair Oil",
+      "slug": "silk-touch-hair-oil",
+      "price": 32.0,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-hair-oil-private-label-white-packaging.jpg",
+      "description": "Aceite capilar reparador de tacto sedoso. Elimina el encrespamiento y sella las puntas sin apelmazar.",
+      "options": ["Original Bloom", "Vanilla Sky"]
+    },
+    {
+      "id": "DL-008",
+      "name": "Solid Perfume Essence Stick",
+      "slug": "solid-perfume-stick",
+      "price": 35.0,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-solid-perfume-private-label-white-packaging.jpg",
+      "description": "Perfume sólido en stick con notas florales. Práctico y duradero, ideal para retocar tu fragancia en cualquier lugar.",
+      "options": ["Floral", "Citric", "Woody"]
+    },
+    {
+      "id": "DL-009",
+      "name": "Gentle Foam Face Cleanser",
+      "slug": "gentle-foam-face-cleanser",
+      "price": 19.9,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-face-cleanser-private-label-white-packaging.jpg",
+      "description": "Limpiador facial espumoso que respeta el pH. Elimina maquillaje e impurezas dejando una sensación de frescura total.",
+      "options": ["150ml"]
+    },
+    {
+      "id": "DL-010",
+      "name": "Illuminating Face Mist",
+      "slug": "illuminating-face-mist",
+      "price": 24.0,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-face-mist-private-label-white-packaging.jpg",
+      "description": "Bruma facial refrescante. Úsala para preparar la piel o para fijar el maquillaje con un acabado 'glow'.",
+      "options": ["Dewy Finish", "Matte Finish"]
+    },
+    {
+      "id": "DL-011",
+      "name": "Whipped Body Butter",
+      "slug": "whipped-body-butter",
+      "price": 34.0,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-body-butter-private-label-white-packaging.jpg",
+      "description": "Manteca corporal batida. Se funde instantáneamente para proporcionar hidratación profunda y un aroma envolvente.",
+      "options": ["Vanilla Bean", "Lavender Calm"]
+    },
+    {
+      "id": "DL-012",
+      "name": "Purifying Clay Mask",
+      "slug": "purifying-clay-mask",
+      "price": 29.5,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-clay-mask-private-label-white-packaging.jpg",
+      "description": "Mascarilla de arcilla perfeccionadora. Limpia poros y detoxifica la piel sin resecar el cutis.",
+      "options": ["Pink Clay", "Charcoal"]
+    },
+    {
+      "id": "DL-013",
+      "name": "Brightening Eye Cream",
+      "slug": "brightening-eye-cream",
+      "price": 38.0,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-eye-cream-private-label-white-packaging.jpg",
+      "description": "Contorno de ojos revitalizante con cafeína. Reduce ojeras y líneas de expresión para una mirada descansada.",
+      "options": ["15ml"]
+    },
+    {
+      "id": "DL-014",
+      "name": "Botanical Face Oil",
+      "slug": "botanical-face-oil",
+      "price": 42.0,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-face-oil-private-label-white-packaging.jpg",
+      "description": "Elixir de aceites botánicos prensados en frío. Tratamiento nocturno nutritivo que regenera la piel mientras duermes.",
+      "options": ["Anti-aging", "Radiance"]
+    },
+    {
+      "id": "DL-015",
+      "name": "Exfoliating Lip Scrub",
+      "slug": "exfoliating-lip-scrub",
+      "price": 16.0,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-lip-scrub-private-label-white-packaging.jpg",
+      "description": "Exfoliante de azúcar natural. Elimina suavemente células muertas preparando los labios para el color.",
+      "options": ["Strawberry", "Mint"]
+    },
+    {
+      "id": "DL-016",
+      "name": "Matte Liquid Lipstick",
+      "slug": "matte-liquid-lipstick",
+      "price": 24.5,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-matte-liquid-lipstick-private-label-white-packaging.jpg",
+      "description": "Labial líquido mate aterciopelado. Pigmentación extrema de larga duración que no transfiere.",
+      "options": ["Nude Ambition", "Iconic Red", "Mauve Muse"]
+    },
+    {
+      "id": "DL-017",
+      "name": "Vitamin C Glow Toner",
+      "slug": "vitamin-c-glow-toner",
+      "price": 26.0,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-face-toner-private-label-white-packaging.jpg",
+      "description": "Tónico equilibrante con Vitamina C. Rejuvenece la textura de la piel y aporta un brillo saludable instantáneo.",
+      "options": ["200ml"]
+    },
+    {
+      "id": "DL-018",
+      "name": "Defining Brow Gel",
+      "slug": "defining-brow-gel",
+      "price": 18.0,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-brow-gel-private-label-white-packaging.jpg",
+      "description": "Gel fijador de cejas. Define y rellena manteniendo tus cejas impecables todo el día.",
+      "options": ["Clear", "Light Brown", "Dark Brown"]
+    },
+    {
+      "id": "DL-019",
+      "name": "Overnight Repair Mask",
+      "slug": "overnight-repair-mask",
+      "price": 48.0,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-sleeping-mask-private-label-white-packaging.jpg",
+      "description": "Mascarilla de noche ultra-reparadora con ácido hialurónico. Despierta con una piel intensamente hidratada.",
+      "options": ["50ml"]
+    },
+    {
+      "id": "DL-020",
+      "name": "Eyelash Growth Serum",
+      "slug": "eyelash-growth-serum",
+      "price": 36.0,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-eyelash-serum-private-label-white-packaging.jpg",
+      "description": "Sérum potenciador de pestañas. Fortalece desde la raíz para pestañas más largas y densas en 4 semanas.",
+      "options": ["5ml"]
+    },
+    {
+      "id": "DL-021",
+      "name": "Volume & Curl Mascara",
+      "slug": "volume-curl-mascara",
+      "price": 22.0,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-mascara-private-label-white-packaging.jpg",
+      "description": "Máscara de pestañas efecto abanico. Aporta volumen extremo y una curvatura duradera sin grumos.",
+      "options": ["Midnight Black"]
+    },
+    {
+      "id": "DL-022",
+      "name": "Precision Liquid Eyeliner",
+      "slug": "precision-liquid-eyeliner",
+      "price": 19.5,
+      "image": "https://dlabcosmetics.com/cdn/shop/files/custom-liquid-eyeliner-private-label-white-packaging.jpg",
+      "description": "Delineador de punta ultra precisa. Resistente al agua y de secado rápido para un delineado perfecto 24h.",
+      "options": ["Matte Black"]
+    }
+  ]
+}

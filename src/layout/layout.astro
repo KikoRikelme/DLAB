@@ -1,0 +1,66 @@
+---
+interface Props {
+    title: string;
+}
+const { title } = Astro.props;
+
+import { Image } from "astro:assets";
+import DLAB_LOGO from "@assets/logo/dlab_black.png";
+import "@styles/globals.css";
+import Footer from "@components/Footer.astro";
+---
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar__brand">
+                <a href="/">
+                    <Image src={DLAB_LOGO} alt={"DLAB logo"} />
+                </a>
+            </div>
+            <a href="/carrito">Carrito</a>
+        </nav>
+
+        <main class="main-content">
+            <slot />
+        </main>
+
+        <Footer />
+    </body>
+</html>
+
+<style>
+    nav {
+        position: fixed;
+        top: 1rem;
+        left: 0;
+        width: 100%;
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+
+        img {
+            max-width: 6rem;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+            line-height: 100%;
+            font-family: ahg-bold;
+            font-size: 1rem;
+        }
+    }
+
+    .main-content {
+        min-height: 100vh;
+        margin: 0 1rem;
+    }
+</style>

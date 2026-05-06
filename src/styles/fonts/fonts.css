@@ -1,0 +1,15 @@
+@import "typescale.css";
+
+@font-face {
+    font-family: ahg;
+    src: url("/fonts/AlteHaasGroteskRegular.ttf");
+}
+
+@font-face {
+    font-family: "ahg-bold";
+    src: url("/fonts/AlteHaasGroteskBold.ttf");
+}
+
+* {
+    font-family: ahg;
+}

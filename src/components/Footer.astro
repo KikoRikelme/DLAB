@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import D_LOGO from "@assets/logo/logo-letters/logo-D.png";
+import L_LOGO from "@assets/logo/logo-letters/logo-L.png";
+import A_LOGO from "@assets/logo/logo-letters/logo-A.png";
+import B_LOGO from "@assets/logo/logo-letters/logo-B.png";
+---
+
+<footer class="hero hero--invert">
+    <Image src={B_LOGO} alt={"B"} />
+    <Image src={A_LOGO} alt={"A"} />
+    <Image src={L_LOGO} alt={"L"} />
+    <Image src={D_LOGO} alt={"D"} />
+    <h4>
+        Cosmética que hace lo que tiene que hacer. Sin historias. Sin residuos.
+    </h4>
+</footer>
+
+<style>
+    .hero {
+        padding-top: 10vh;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 3fr 1fr;
+        justify-items: center;
+        /*grid-template-rows: repeat(8, 1fr);*/
+        img {
+            height: 4rem;
+            width: auto;
+            position: relative;
+        }
+        h4 {
+            grid-column: 1/4;
+        }
+    }
+    .hero--invert {
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+        transform: rotate(180deg);
+    }
+</style>
+
+<script>
+    const getRandomHeight = () => {
+        return Math.floor(Math.random() * 90);
+    };
+    const dlabLetters = document.querySelectorAll("img");
+    dlabLetters.forEach((letter) => {
+        letter.style.top = `${getRandomHeight()}%`;
+    });
+</script>

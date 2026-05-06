@@ -1,17 +1,223 @@
 ---
+import { Image } from "astro:assets";
+import Layout from "@/layout/layout.astro";
+import ProductCard from "@/components/productCard.astro";
+import PRODUCT_DATA from "@assets/data/products.json";
+const { products } = PRODUCT_DATA;
+import D_LOGO from "@assets/logo/logo-letters/logo-D.png";
+import L_LOGO from "@assets/logo/logo-letters/logo-L.png";
+import A_LOGO from "@assets/logo/logo-letters/logo-A.png";
+import B_LOGO from "@assets/logo/logo-letters/logo-B.png";
 
+const chunkSize = 4;
+const grupos = Array.from(
+    { length: Math.ceil(products.length / chunkSize) },
+    (_, i) => products.slice(i * chunkSize, i * chunkSize + chunkSize),
+);
+const gridClasses = [
+    "product--grid--first",
+    "product--grid--second",
+    "product--grid--third",
+    "product--grid--fourth",
+    "product--grid--fitht",
+    "product--grid--sixth",
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Inicio">
+    <section class="hero">
+        <Image src={B_LOGO} alt={"B"} />
+        <Image src={A_LOGO} alt={"A"} />
+        <Image src={L_LOGO} alt={"L"} />
+        <Image src={D_LOGO} alt={"D"} />
+        <h4>
+            Cosmética que hace lo que tiene que hacer. Sin historias. Sin
+            residuos.
+        </h4>
+    </section>
+
+    <section class="us">
+        <h4>
+            No nacimos para ser otra marca bonita. Nacimos porque la cosmética
+            se ha complicado demasiado. Demasiadas promesas. Demasiadas
+            palabras. Demasiado precio para lo que es. Nosotros hacemos lo
+            contrario.
+        </h4>
+        <h4>
+            No nacimos para ser otra marca bonita. Nacimos porque la cosmética
+            se ha complicado demasiado. Demasiadas promesas. Demasiadas
+            palabras. Demasiado precio para lo que es. Nosotros hacemos lo
+            contrario.
+        </h4>
+    </section>
+
+    {
+        grupos.map((grupo, i) => (
+            <section class={`product--grid ${gridClasses[i]}`}>
+                {grupo.map((product) => (
+                    <ProductCard
+                        name={product.name}
+                        price={product.price}
+                        image={products[0].image}
+                        slug={product.slug}
+                    />
+                ))}
+            </section>
+        ))
+    }
+</Layout>
+
+<style>
+    .hero {
+        padding-top: 10vh;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 3fr 1fr;
+        justify-items: center;
+        /*grid-template-rows: repeat(8, 1fr);*/
+        img {
+            height: 4rem;
+            width: auto;
+            position: relative;
+        }
+        h4 {
+            grid-column: 1/4;
+        }
+    }
+
+    .us {
+        position: relative;
+        height: 60vh;
+        h4 {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            opacity: 0.5;
+        }
+    }
+
+    .product--grid {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+        grid-template-rows: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+</style>
+
+<style is:global>
+    .product--grid--first {
+        margin-bottom: 8rem;
+
+        .product-card:nth-child(1) {
+            grid-column: 1 / 5;
+        }
+        .product-card:nth-child(2) {
+            grid-column: 5 / 9;
+        }
+        .product-card:nth-child(3) {
+            grid-column: 1 / 6;
+        }
+        .product-card:nth-child(4) {
+            grid-column: 6 / 9;
+        }
+    }
+
+    .product--grid--second {
+        margin-bottom: 8rem;
+
+        .product-card:nth-child(1) {
+            grid-column: 2 / 6;
+        }
+        .product-card:nth-child(2) {
+            grid-column: 6 / 9;
+        }
+        .product-card:nth-child(3) {
+            grid-column: 2 / 5;
+        }
+        .product-card:nth-child(4) {
+            grid-column: 5 / 9;
+        }
+    }
+
+    .product--grid--third {
+        margin-bottom: 8rem;
+
+        .product-card:nth-child(1) {
+            grid-column: 1 / 4;
+        }
+        .product-card:nth-child(2) {
+            grid-column: 4 / 9;
+        }
+        .product-card:nth-child(3) {
+            grid-column: 3 / 7;
+        }
+        .product-card:nth-child(4) {
+            grid-column: 1 / 5;
+        }
+    }
+
+    .product--grid--fourth {
+        margin-bottom: 8rem;
+
+        .product-card:nth-child(1) {
+            grid-column: 3 / 8;
+        }
+        .product-card:nth-child(2) {
+            grid-column: 1 / 4;
+        }
+        .product-card:nth-child(3) {
+            grid-column: 5 / 9;
+        }
+        .product-card:nth-child(4) {
+            grid-column: 2 / 7;
+        }
+    }
+
+    .product--grid--fitht {
+        margin-bottom: 8rem;
+
+        .product-card:nth-child(1) {
+            grid-column: 1 / 6;
+        }
+        .product-card:nth-child(2) {
+            grid-column: 6 / 9;
+        }
+        .product-card:nth-child(3) {
+            grid-column: 4 / 9;
+        }
+        .product-card:nth-child(4) {
+            grid-column: 1 / 4;
+        }
+    }
+
+    .product--grid--sixth {
+        grid-template-rows: repeat(1, 1fr);
+        margin-bottom: 8rem;
+
+        .product-card:nth-child(1) {
+            grid-column: 2 / 5;
+        }
+        .product-card:nth-child(2) {
+            grid-column: 5 / 8;
+        }
+    }
+</style>
+
+<script>
+    const getRandomHeight = () => {
+        return Math.floor(Math.random() * 90);
+    };
+    const dlabLetters = document.querySelectorAll("img");
+    dlabLetters.forEach((letter) => {
+        letter.style.top = `${getRandomHeight()}%`;
+    });
+</script>

@@ -1,0 +1,64 @@
+---
+interface Props {
+    id: string;
+    name: string;
+    slug: string;
+    image: string;
+    price: number;
+}
+const { id, name, slug, image, price } = Astro.props;
+---
+
+<section class="product--handle" data-handle>
+    <div class="product--buttons">
+        <button data-add class="button--add">+</button>
+        <span data-qty class="button--qty">1</span>
+        <button data-sub class="button--subtract">−</button>
+    </div>
+    <button
+        data-cart
+        data-product={JSON.stringify({ id, name, slug, image, price })}
+        class="product--to-cart"
+    >
+        <h4>Añadir al carrito</h4>
+    </button>
+</section>
+
+<style>
+    .product--handle {
+        display: inline-flex;
+    }
+    .product--buttons {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+
+        font-size: 1.33em;
+        font-family: "ahg-bold";
+    }
+</style>
+
+<script>
+    import { addToCart } from "../stores/cart";
+
+    document.querySelectorAll("[data-handle]").forEach((handle) => {
+        const qty = handle.querySelector("[data-qty]");
+        const btnAdd = handle.querySelector("[data-add]");
+        const btnSub = handle.querySelector("[data-sub]");
+        const btnCart = handle.querySelector("[data-cart]");
+        let quantity = 1;
+
+        btnAdd.addEventListener("click", () => {
+            qty.textContent = ++quantity;
+        });
+
+        btnSub.addEventListener("click", () => {
+            if (quantity > 1) qty.textContent = --quantity;
+        });
+
+        btnCart.addEventListener("click", () => {
+            const product = JSON.parse(btnCart.dataset.product);
+            addToCart({ ...product, quantity });
+        });
+    });
+</script>

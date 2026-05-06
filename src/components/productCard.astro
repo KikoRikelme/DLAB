@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+    name: string;
+    price: number;
+    image: string;
+    slug: string;
+}
+
+const { name, price, image, slug } = Astro.props;
+
+// const images = import.meta.glob<{ default: ImageMetadata }>(
+//     "/src/assets/productPhotos/*.{jpeg,jpg,png,gif}",
+// );
+
+// const imagePath = image.replace("@", "/src");
+
+// if (!images[imagePath]) {
+//     throw new Error(`"${imagePath}" no existe en "src/assets/productPhotos/"`);
+// }
+---
+
+<div class="product-card">
+    <a href={`/productos/${slug}`}>
+        <!-- <Image src={images[imagePath]()} alt={name} width={400} height={400} /> -->
+        <Image src={image} alt={name} width={400} height={400} />
+        <h5>{name}</h5>
+        <span>${price}</span>
+    </a>
+</div>
+
+<style>
+    .product-card {
+        display: flex;
+        flex-direction: column;
+    }
+    a {
+        text-decoration: none;
+    }
+    h5 {
+        margin: 0;
+    }
+    img {
+        height: auto;
+        object-fit: cover;
+        aspect-ratio: 3/4;
+    }
+</style>

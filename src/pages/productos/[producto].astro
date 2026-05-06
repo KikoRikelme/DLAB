@@ -1,0 +1,71 @@
+---
+import Layout from "@/layout/layout.astro";
+import AddToCart from "@components/AddToCard.astro";
+import data from "@assets/data/products.json";
+import { Image } from "astro:assets";
+
+export function getStaticPaths() {
+    return data.products.map((product) => ({
+        params: { producto: product.slug },
+        props: { product },
+    }));
+}
+
+const { product } = Astro.props;
+---
+
+<Layout>
+    <a href="/" class="return">
+        <span>⮌ </span><p>Volver atras</p>
+    </a>
+    <section class="product">
+        <h3>{product.name}</h3>
+        <Image src={product.image} alt={product.id} width={400} height={400} />
+        <p>{product.description}</p>
+        <h4>{product.price}</h4>
+        <hr />
+    </section>
+    <section class="product--handle">
+        <AddToCart
+            id={product.id}
+            name={product.name}
+            slug={product.slug}
+            image={product.image}
+            price={product.price}
+        />
+    </section>
+    <hr />
+    <p>
+        Productos básicos. Bien hechos. Limpian. Hidratan. Cuidan. Y no llevan
+        nada que no tenga sentido.
+    </p>
+</Layout>
+
+<style>
+    .return {
+        margin-top: 10vh;
+
+        padding: 1rem 0rem;
+        display: inline-flex;
+        flex-direction: row;
+        gap: 0.275rem;
+    }
+
+    .product--handle {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        text-size: 1.275rem;
+        font-family: ahg-bold;
+
+        button {
+            border: none;
+            background-color: transparent;
+            padding: 1rem;
+        }
+    }
+
+    hr {
+        border: 0.5rem solid black;
+    }
+</style>
