@@ -8,6 +8,20 @@ import { Image } from "astro:assets";
 import DLAB_LOGO from "@assets/logo/dlab_black.png";
 import "@styles/globals.css";
 import Footer from "@components/Footer.astro";
+
+import { cartStore } from "src/stores/cart";
+
+let itemsQty = 10;
+const getAllItemsInCart = () => {
+    const itemsList = cartStore.init;
+    let itemsQty;
+
+    itemsList?.forEach((i) => {
+        itemsQty += i.quantity;
+    });
+
+    return itemsQty;
+};
 ---
 
 <html lang="es">
@@ -23,7 +37,7 @@ import Footer from "@components/Footer.astro";
                     <Image src={DLAB_LOGO} alt={"DLAB logo"} />
                 </a>
             </div>
-            <a href="/carrito">Carrito</a>
+            <a href="/carrito">({itemsQty})</a>
         </nav>
 
         <main class="main-content">
@@ -55,7 +69,7 @@ import Footer from "@components/Footer.astro";
             text-decoration: none;
             line-height: 100%;
             font-family: ahg-bold;
-            font-size: 1rem;
+            font-size: 1.275rem;
         }
     }
 
